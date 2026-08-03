@@ -1,0 +1,21 @@
+# LLM API (new official SDK, replaces deprecated google-generativeai)
+google-genai==1.3.0
+
+# OpenAI-compatible client - used to connect to Groq's free API
+# (Gemini free tier was not accessible without billing setup in this account/region)
+openai>=1.50.0
+
+# Vector embeddings for schema-aware search
+# NOTE: version pins removed for numpy/scikit-learn because numpy==1.26.4
+# has no pre-built wheel for Python 3.13 and fails to build from source
+# on Windows without a C compiler. Letting pip pick a compatible version instead.
+sentence-transformers==3.3.1
+numpy>=1.26.4
+scikit-learn>=1.5.2
+
+# Database
+# sqlite3 is built into Python, no install needed
+
+# Utilities
+tqdm==4.67.1
+pandas>=2.2.3
