@@ -35,13 +35,13 @@ ACTIVE_API_KEY = GROQ_API_KEY if PROVIDER == "groq" else GEMINI_API_KEY
 # ---- Model Configuration ----
 if PROVIDER == "groq":
     # Groq free models (as of testing) - fast inference, no card needed
-    MODEL_SPIDER1 = "llama-3.1-8b-instant"
-    MODEL_SPIDER2 = "llama-3.3-70b-versatile"
+    MODEL_SPIDER1 = "qwen/qwen3.6-27b"
+    MODEL_SPIDER2 = "qwen/qwen3.6-27b"
     MODEL_FALLBACK_STRONG = "llama-3.1-8b-instant"
 else:
     # Gemini model names (paper's original setup, kept for future use)
-    MODEL_SPIDER1 = "gemini-2.0-flash"
-    MODEL_SPIDER2 = "gemini-2.5-flash"
+    MODEL_SPIDER1 = "qwen/qwen3.6-27b"
+    MODEL_SPIDER2 = "qwen/qwen3.6-27b"
     MODEL_FALLBACK_STRONG = "gemini-2.5-pro"
 
 # ---- Schema Retrieval Configuration ----
